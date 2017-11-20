@@ -4,8 +4,8 @@ from __future__ import (division,
                         print_function,
                         unicode_literals)
 
-from xlsx2txt import Source
-from xlsx2txt import TextRender
+from pygeba import Source
+from pygeba import TextRender
 
 import click
 

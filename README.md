@@ -4,8 +4,8 @@ xlsxのデータを取り込む際に、プログラミングを行わずにjinj
 # インストール
 
 ```bash
-$ git clone https://github.com/hrsano645/xlsx2txt.git
-$ cd xlsx2txt
+$ git clone https://github.com/hrsano645/pygeba.git
+$ cd pygeba
 # cerate virtual enviroment. example python3 venv and macos 
 $ python3 -m venv env
 $ soruce env/bin/activate 
@@ -14,8 +14,8 @@ $ soruce env/bin/activate
 
 # コマンドの利用方法
 ```
-(env)$ python xlsx2txt-cli.py --help
-Usage: xlsx2txt-cli.py [OPTIONS] SRC_TEMPLATE SRC_DATA EXPORT_TEMPLATE
+(env)$ python pygeba-cli.py --help
+Usage: pygeba-cli.py [OPTIONS] SRC_TEMPLATE SRC_DATA EXPORT_TEMPLATE
 
 Options:
   --export_filename TEXT  Set export filename
@@ -29,11 +29,11 @@ Options:
 以下の３つを用意することで利用できます。サンプルファイルは `./tests/testfiles/` 内にあります。
 
 ソースデータ(source data): 変換元のデータが入ったxlsxファイル  
-![source data file image](https://github.com/hrsano645/xlsx2txt/blob/master/docs/img/example_data_img.png?raw=true)
+![source data file image](https://github.com/hrsano645/pygeba/blob/master/docs/img/example_data_img.png?raw=true)
 
 
 ソーステンプレート(source template): ソースデータと同じワークシートやセルのレイアウトにしたものにテンプレート変数を埋め込んだxlsxファイル  
-![source template file image](https://github.com/hrsano645/xlsx2txt/blob/master/docs/img/example_template_img.png?raw=true)
+![source template file image](https://github.com/hrsano645/pygeba/blob/master/docs/img/example_template_img.png?raw=true)
 
 エクスポートテンプレート(export template):jinja2のテンプレート変数を埋め込んだテキストファイル(htmlやjson, csvなど)
 
@@ -75,7 +75,7 @@ Options:
 ソーステンプレートとエクスポートテンプレートで利用するテンプレート変数名は同じにすることでマッピングを行い、jinja2テンプレートを用いてテキスト形式に変換されます。
 
 ```bash
-(env)$ python xlsx2txt-cli.py ./tests/testfiles/template.xlsx ./tests/testfiles/data.xlsx ./tests/testfiles/export_template.html 
+(env)$ python pygeba-cli.py ./tests/testfiles/template.xlsx ./tests/testfiles/data.xlsx ./tests/testfiles/export_template.html 
 
 ```
 
@@ -115,11 +115,11 @@ Options:
 ```
 
 # ライブラリの利用方法
-xlsx2txtはライブラリとしても利用できます。以下に簡単なサンプルを記載します。
+pygebaはライブラリとしても利用できます。以下に簡単なサンプルを記載します。
 
 ```python
-from xlsx2txt import Source
-from xlsx2txt import TextRender
+from pygeba import Source
+from pygeba import TextRender
 
 # 各種ファイルパスを指定
 src_template = "[source template file path]"
