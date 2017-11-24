@@ -1,0 +1,10 @@
+# Include the license file
+include LICENSE.txt
+
+# Include the data files
+#recursive-include data *
+
+global-exclude *.DS_Store
+
+graft docs
+graft tests
