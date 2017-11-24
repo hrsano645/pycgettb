@@ -19,8 +19,8 @@ xlsxのデータを取り込む際に、プログラミングを行わずにjinj
 
 ::
 
-    (env)$ python pycgettb-cli.py --help
-    Usage: pycgettb-cli.py [OPTIONS] SRC_TEMPLATE SRC_DATA EXPORT_TEMPLATE
+    (env)$ pycgettbcli --help
+    Usage: pycgettbcli [OPTIONS] SRC_TEMPLATE SRC_DATA EXPORT_TEMPLATE
 
     Options:
       --export_filename TEXT  Set export filename
@@ -84,7 +84,7 @@ xlsxのデータを取り込む際に、プログラミングを行わずにjinj
 
 ::
 
-    (env)$ python pycgettb-cli.py ./tests/testfiles/template.xlsx ./tests/testfiles/data.xlsx ./tests/testfiles/export_template.html
+    (env)$ pycgettbcli ./tests/testfiles/template.xlsx ./tests/testfiles/data.xlsx ./tests/testfiles/export_template.html
 
 
 変換された exported_data.txt は以下となります。
