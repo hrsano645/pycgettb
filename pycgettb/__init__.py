@@ -13,12 +13,12 @@ from openpyxl.utils.exceptions import InvalidFileException
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 
-__version__ = "0.0.1"
+__version__ = "0.1.0"
+
 
 # Exception list
 
-
-class DiffirentRenderClassError(Exception):
+class DifferentRenderClassError(Exception):
     pass
 
 
@@ -30,6 +30,7 @@ class SourceTemplateNotLoadError(Exception):
 class SourceDataNotLoadError(Exception):
     """ データを読み込めなかったときの例外 """
     pass
+
 
 # ソースのテンプレとデータを持たせるクラス
 class Source(object):
