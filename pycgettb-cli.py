@@ -4,8 +4,8 @@ from __future__ import (division,
                         print_function,
                         unicode_literals)
 
-from pygeba import Source
-from pygeba import TextRender
+from pycgettb import Source
+from pycgettb import TextRender
 
 import click
 

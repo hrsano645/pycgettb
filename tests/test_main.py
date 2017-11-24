@@ -7,9 +7,9 @@ from __future__ import (division,
 import unittest
 import datetime
 
-from pygeba import Source
-from pygeba import BaseRender, TextRender
-from pygeba import SourceTemplateNotLoadError, SourceDataNotLoadError
+from pycgettb import Source
+from pycgettb import BaseRender, TextRender
+from pycgettb import SourceTemplateNotLoadError, SourceDataNotLoadError
 import openpyxl
 
 class SouceTemplateTestCase(unittest.TestCase):

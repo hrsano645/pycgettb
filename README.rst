@@ -7,8 +7,8 @@ xlsxのデータを取り込む際に、プログラミングを行わずにjinj
 ========================================
 ::
 
-    $ git clone https://github.com/hrsano645/pygeba.git
-    $ cd pygeba
+    $ git clone https://github.com/hrsano645/pycgettb.git
+    $ cd pycgettb
     # cerate virtual enviroment. example python3 venv and macos
     $ python3 -m venv env
     $ soruce env/bin/activate
@@ -19,8 +19,8 @@ xlsxのデータを取り込む際に、プログラミングを行わずにjinj
 
 ::
 
-    (env)$ python pygeba-cli.py --help
-    Usage: pygeba-cli.py [OPTIONS] SRC_TEMPLATE SRC_DATA EXPORT_TEMPLATE
+    (env)$ python pycgettb-cli.py --help
+    Usage: pycgettb-cli.py [OPTIONS] SRC_TEMPLATE SRC_DATA EXPORT_TEMPLATE
 
     Options:
       --export_filename TEXT  Set export filename
@@ -36,12 +36,12 @@ xlsxのデータを取り込む際に、プログラミングを行わずにjinj
 
 ソースデータ(source data): 変換元のデータが入ったxlsxファイル
 
-.. image:: https://github.com/hrsano645/pygeba/blob/master/docs/img/example_data_img.png?raw=true
+.. image:: https://github.com/hrsano645/pycgettb/blob/master/docs/img/example_data_img.png?raw=true
     :alt: source data file image
 
 ソーステンプレート(source template): ソースデータと同じワークシートやセルのレイアウトにしたものにテンプレート変数を埋め込んだxlsxファイル
 
-.. image:: https://github.com/hrsano645/pygeba/blob/master/docs/img/example_template_img.png?raw=true
+.. image:: https://github.com/hrsano645/pycgettb/blob/master/docs/img/example_template_img.png?raw=true
     :alt:  source template file image
 
 エクスポートテンプレート(export template):jinja2のテンプレート変数を埋め込んだテキストファイル(htmlやjson, csvなど)
@@ -84,7 +84,7 @@ xlsxのデータを取り込む際に、プログラミングを行わずにjinj
 
 ::
 
-    (env)$ python pygeba-cli.py ./tests/testfiles/template.xlsx ./tests/testfiles/data.xlsx ./tests/testfiles/export_template.html
+    (env)$ python pycgettb-cli.py ./tests/testfiles/template.xlsx ./tests/testfiles/data.xlsx ./tests/testfiles/export_template.html
 
 
 変換された exported_data.txt は以下となります。
@@ -124,12 +124,12 @@ xlsxのデータを取り込む際に、プログラミングを行わずにjinj
 ライブラリの利用方法
 ========================================
 
-pygebaはライブラリとしても利用できます。以下に簡単なサンプルを記載します。
+pycgettbはライブラリとしても利用できます。以下に簡単なサンプルを記載します。
 
 ::
 
-    from pygeba import Source
-    from pygeba import TextRender
+    from pycgettb import Source
+    from pycgettb import TextRender
 
     # 各種ファイルパスを指定
     src_template = "[source template file path]"
