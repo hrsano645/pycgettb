@@ -2,3 +2,8 @@ exam
 .idea
 __pycache__
 exported_data.txt
+wheelhouse
+build
+dist
+env*
+*.egg-info
