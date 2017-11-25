@@ -3,8 +3,6 @@
 
 Pycgettbは帳票ベースのエクセルファイルをテキストデータに変換します。特別なプログラミングは必要なく同じ形のデータとテンプレートを用意し、jinja2ベースのテンプレートを用いてテキストデータとして出力します。
 
-Pycgettb is convert guided form excel files to text data.
-
 このコマンド,ライブラリはα版です
 ========================================
 
@@ -172,6 +170,7 @@ pycgettbはライブラリとしても利用できます。以下に簡単なサ
     # 変換した結果を書き出す
     with open(export_filename, "w") as export_file:
         export_file.write(textrender.render())
+
 
 Future Work
 ========================================
