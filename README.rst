@@ -1,8 +1,5 @@
 What's This?
 ========================================
-
-Pycgettbは帳票ベースのエクセルファイルをテキストデータに変換します。特別なプログラミングは必要なく同じ形のデータとテンプレートを用意し、jinja2ベースのテンプレートを用いてテキストデータを定義します。
-
 Pycgettb is convert guided form excel files to text data. No special programming is required.
 
 First, prepare the same xlsx format of the data and the template, to define the text data using the jinja2-based template.
@@ -21,7 +18,7 @@ Using pip
 
 ::
 
-    # Example, Using Python3 VEnv
+    # Example, Using Python3 venv module.
     $ python3 -m venv env
     $ source env/bin/activate
     (env)$ pip install pycgettb
@@ -34,7 +31,7 @@ Using by Github
     $ git clone https://github.com/hrsano645/pycgettb.git
     $ cd pycgettb
 
-    # Example, Using Python3 VEnv
+    # Example, Using Python3 venv module.
     $ python3 -m venv env
     $ source env/bin/activate
 
@@ -147,22 +144,22 @@ Command Usage
     </body>
     </html>
 
-ライブラリの利用方法
+Using as a ibrary
 ========================================
 
-pycgettbはライブラリとしても利用できます。以下に簡単なサンプルを記載します。
+pycgettb can also be used as a library.
 
 ::
 
     from pycgettb import Source
     from pycgettb import TextRender
 
-    # 各種ファイルパスを指定
+    # set file path
     src_template = "[source template file path]"
     src_data = "[source data file path]"
     export_template = "[export template file path]"
 
-    # 書き出すファイル名を指定
+    # define export filename
     export_filename = "exported_file.txt"
 
     source = Source(src_template, src_data)
@@ -170,19 +167,19 @@ pycgettbはライブラリとしても利用できます。以下に簡単なサ
 
     textrender = TextRender(export_template, source_data_map)
 
-    # 変換した結果を書き出す
+    # write rendreing textdata
     with open(export_filename, "w") as export_file:
         export_file.write(textrender.render())
 
 Future Work
 ========================================
 
-- 各OS向けのバイナリを用意
-- データの羅列（リスト形式）に対応できるソーステンプレートの変数の追加
-- （何かしらの方法で）GUIフロントエンド
-- APIのドキュメントを用意
+- Building a command binary for Windows, macOS, Linux.
+- Add list type to source template variable
+- GUI Frontend
+- API Document
 
-ライセンス
+License
 ========================================
 MIT License
 
