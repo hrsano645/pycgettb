@@ -1,26 +1,27 @@
-これは何？
+What's This?
 ========================================
 
-Pycgettbは帳票ベースのエクセルファイルをテキストデータに変換します。特別なプログラミングは必要なく同じ形のデータとテンプレートを用意し、jinja2ベースのテンプレートを用いてテキストデータとして出力します。
+Pycgettbは帳票ベースのエクセルファイルをテキストデータに変換します。特別なプログラミングは必要なく同じ形のデータとテンプレートを用意し、jinja2ベースのテンプレートを用いてテキストデータを定義します。
 
-Pycgettb is convert guided form excel files to text data.
+Pycgettb is convert guided form excel files to text data. No special programming is required.
 
-このコマンド,ライブラリはα版です
+First, prepare the same xlsx format of the data and the template, to define the text data using the jinja2-based template.
+
+This command/library is currently alpha version
 ========================================
 
-α版のためライブラリのAPIやコマンドの仕様は定まっておらず、変更される恐れがあります。
+Recommended to use it in virtual environment.
 
-インストール
+Install
 ========================================
 
-※:α版のため仮想環境での利用をおすすめします。
 
 Using pip
 ----------------------------------------
 
 ::
 
-    # 仮想環境でセットアップします
+    # Example, Using Python3 VEnv
     $ python3 -m venv env
     $ source env/bin/activate
     (env)$ pip install pycgettb
@@ -33,13 +34,13 @@ Using by Github
     $ git clone https://github.com/hrsano645/pycgettb.git
     $ cd pycgettb
 
-    # 仮想環境でセットアップします
+    # Example, Using Python3 VEnv
     $ python3 -m venv env
     $ source env/bin/activate
 
     (env)$ pip install -r requirements.txt
 
-コマンドの利用方法
+Command Usage
 ========================================
 
 ::
@@ -52,7 +53,7 @@ Using by Github
       --help                  Show this message and exit.
 
 
-- `--export_filename` はエクスポートしたファイルの名前を指定します。指定しない場合は exported_data.txtというファイル名を作成します。
+- `--export_filename`: If not specified, create a file named `exported_data.txt`.
 
 利用例
 ========================================
