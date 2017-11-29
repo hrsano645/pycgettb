@@ -9,6 +9,17 @@ This command/library is currently alpha version
 
 Recommended to use it in virtual environment.
 
+
+
+Dependencies
+========================================
+
+- Python 3.6, 2.7(Development by 3.6)
+- `openpyxl <https://openpyxl.readthedocs.io/en/default/>`_
+- `Jinja2 <http://jinja.pocoo.org/docs/2.9/>`_
+- `Click <http://click.pocoo.org/5/>`_
+
+
 Install
 ========================================
 
@@ -52,7 +63,7 @@ Command Usage
 
 - `--export_filename`: If not specified, create a file named `exported_data.txt`.
 
-利用例
+How To Use
 ========================================
 
 まず３種類のファイルを用意することで利用できます。サンプルファイルは `./tests/testfiles/` 内にあります。
@@ -144,7 +155,7 @@ Command Usage
     </body>
     </html>
 
-Using as a ibrary
+Using as a Library
 ========================================
 
 pycgettb can also be used as a library.
@@ -182,12 +193,4 @@ Future Work
 License
 ========================================
 MIT License
-
-利用ライブラリ
-========================================
-
-- `openpyxl <https://openpyxl.readthedocs.io/en/default/>`_
-- `Jinja2 <http://jinja.pocoo.org/docs/2.9/>`_
-- `Click <http://click.pocoo.org/5/>`_
-
 
