@@ -1,18 +1,18 @@
 What's This?
-========================================
+============
 Pycgettb is convert guided form excel files to text data. No special programming is required.
 
 First, prepare the same xlsx format of the data and the template, to define the text data using the jinja2-based template.
 
+
 This command/library is currently alpha version
-========================================
+===============================================
 
 Recommended to use it in virtual environment.
 
 
-
 Dependencies
-========================================
+============
 
 - Python 3.6, 2.7(Development by 3.6)
 - `openpyxl <https://openpyxl.readthedocs.io/en/default/>`_
@@ -21,24 +21,22 @@ Dependencies
 
 
 Install
-========================================
+=======
 
 
 Using pip
-----------------------------------------
+---------
 
 ::
-
     # Example, Using Python3 venv module.
     $ python3 -m venv env
     $ source env/bin/activate
     (env)$ pip install pycgettb
 
 Using by Github
-----------------------------------------
+---------------
 
 ::
-
     $ git clone https://github.com/hrsano645/pycgettb.git
     $ cd pycgettb
 
@@ -49,10 +47,9 @@ Using by Github
     (env)$ pip install -r requirements.txt
 
 Command Usage
-========================================
+=============
 
 ::
-
     (env)$ pycgettbcli --help
     Usage: pycgettbcli [OPTIONS] SRC_TEMPLATE SRC_DATA EXPORT_TEMPLATE
 
@@ -64,7 +61,10 @@ Command Usage
 - `--export_filename`: If not specified, create a file named `exported_data.txt`.
 
 How To Use
-========================================
+==========
+
+pycgettbでは３種類のファイルを用意します。サンプルファイルは `./tests/testfiles/` 内にあります。
+
 
 まず３種類のファイルを用意することで利用できます。サンプルファイルは `./tests/testfiles/` 内にあります。
 
@@ -83,7 +83,6 @@ How To Use
 ※:jinja2のテンプレートは現在は変数のみ対応です。ドットによるネストやフィルターなどの対応は未確認です。
 
 ::
-
     <!DOCTYPE html>
     <html lang="ja">
     <head>
@@ -117,14 +116,11 @@ How To Use
 ソーステンプレートとエクスポートテンプレートで利用するテンプレート変数名は同じにすることでマッピングを行い、jinja2テンプレートを用いてテキスト形式に変換されます。
 
 ::
-
     (env)$ pycgettbcli ./tests/testfiles/template.xlsx ./tests/testfiles/data.xlsx ./tests/testfiles/export_template.html
-
 
 変換された exported_data.txt は以下となります。
 
 ::
-
     <!DOCTYPE html>
     <html lang="ja">
     <head>
@@ -156,12 +152,11 @@ How To Use
     </html>
 
 Using as a Library
-========================================
+==================
 
 pycgettb can also be used as a library.
 
 ::
-
     from pycgettb import Source
     from pycgettb import TextRender
 
@@ -183,7 +178,7 @@ pycgettb can also be used as a library.
         export_file.write(textrender.render())
 
 Future Work
-========================================
+===========
 
 - Building a command binary for Windows, macOS, Linux.
 - Add list type to source template variable
@@ -191,6 +186,7 @@ Future Work
 - API Document
 
 License
-========================================
+=======
+
 MIT License
 
