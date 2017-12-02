@@ -63,24 +63,21 @@ Command Usage
 How To Use
 ==========
 
-pycgettbでは３種類のファイルを用意します。サンプルファイルは `./tests/testfiles/` 内にあります。
+When using pycgettb, prepare three files. The sample file is `./tests/testfiles/`.
 
-
-まず３種類のファイルを用意することで利用できます。サンプルファイルは `./tests/testfiles/` 内にあります。
-
-ソースデータ(source data): 変換元のデータが入ったxlsxファイル
+Source Data: An xlsx file containing the data.
 
 .. image:: https://github.com/hrsano645/pycgettb/blob/master/docs/img/example_data_img.png?raw=true
     :alt: source data file image
 
-ソーステンプレート(source template): ソースデータと同じワークシートやセルのレイアウトにしたものにテンプレート変数を埋め込んだxlsxファイル
+Source Template: An xlsx file with embedded template variables. Make the same worksheet and cell layout of the source data file.
 
 .. image:: https://github.com/hrsano645/pycgettb/blob/master/docs/img/example_template_img.png?raw=true
     :alt:  source template file image
 
-エクスポートテンプレート(export template):jinja2のテンプレート変数を埋め込んだテキストファイル(htmlやjson, csvなど)
+Export Template: The jinja2 template file (html, json, csv, etc...)
 
-※:jinja2のテンプレートは現在は変数のみ対応です。ドットによるネストやフィルターなどの対応は未確認です。
+※:The jinja2 template currently supports variables only.
 
 ::
     <!DOCTYPE html>
