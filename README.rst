@@ -4,12 +4,10 @@ Pycgettb is convert guided form excel files to text data. No special programming
 
 First, prepare the same xlsx format of the data and the template, to define the text data using the jinja2-based template.
 
-
 This command/library is currently alpha version
 ===============================================
 
 Recommended to use it in virtual environment.
-
 
 Dependencies
 ============
@@ -19,15 +17,14 @@ Dependencies
 - `Jinja2 <http://jinja.pocoo.org/docs/2.9/>`_
 - `Click <http://click.pocoo.org/5/>`_
 
-
 Install
 =======
-
 
 Using pip
 ---------
 
 ::
+
     # Example, Using Python3 venv module.
     $ python3 -m venv env
     $ source env/bin/activate
@@ -37,6 +34,7 @@ Using by Github
 ---------------
 
 ::
+
     $ git clone https://github.com/hrsano645/pycgettb.git
     $ cd pycgettb
 
@@ -50,6 +48,7 @@ Command Usage
 =============
 
 ::
+
     (env)$ pycgettbcli --help
     Usage: pycgettbcli [OPTIONS] SRC_TEMPLATE SRC_DATA EXPORT_TEMPLATE
 
@@ -80,6 +79,7 @@ Export Template: The jinja2 template file (html, json, csv, etc...)
 ※:The jinja2 template currently supports variables only.
 
 ::
+
     <!DOCTYPE html>
     <html lang="ja">
     <head>
@@ -154,6 +154,7 @@ Using as a Library
 pycgettb can also be used as a library.
 
 ::
+
     from pycgettb import Source
     from pycgettb import TextRender
 
