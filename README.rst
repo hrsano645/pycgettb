@@ -110,14 +110,15 @@ Export Template: The jinja2 template file (html, json, csv, etc...)
     </body>
     </html>
 
-ソーステンプレートとエクスポートテンプレートで利用するテンプレート変数名は同じにすることでマッピングを行い、jinja2テンプレートを用いてテキスト形式に変換されます。
+The template files(source template, export template) must be the same template variable name. Based on that convert to text data using jinja2.
 
 ::
     (env)$ pycgettbcli ./tests/testfiles/template.xlsx ./tests/testfiles/data.xlsx ./tests/testfiles/export_template.html
 
-変換された exported_data.txt は以下となります。
+Converted result. Defalut file name is exported_data.txt
 
 ::
+
     <!DOCTYPE html>
     <html lang="ja">
     <head>
