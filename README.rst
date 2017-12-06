@@ -110,7 +110,7 @@ Export Template: The jinja2 template file (html, json, csv, etc...)
     </body>
     </html>
 
-The template files(source template, export template) must be the same template variable name. Based on that convert to text data using jinja2.
+Template files(source template, export template) must be the same template variable name. Based on that convert to text data using jinja2.
 
 ::
 
