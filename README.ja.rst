@@ -1,36 +1,35 @@
-What's This?
-============
-Pycgettb is convert guided form excel files to text data. No special programming is required.
+これは何？
+=====
 
-First, prepare the same xlsx format of the data and the template, to define the text data using the jinja2-based template.
+Pycgettbは帳票ベースのエクセルファイルをテキストデータに変換します。特別なプログラミングは必要なく同じ形のデータとテンプレートを用意し、jinja2ベースのテンプレートを用いてテキストデータとして出力します。
 
-This command/library is currently alpha version
-===============================================
+このコマンド,ライブラリはα版です
+=================
 
-Recommended to use it in virtual environment.
+α版のため仮想環境での利用をおすすめします。
 
-Dependencies
-============
+利用ライブラリ
+=======
 
-- Python 3.6, 2.7(Development by 3.6)
 - `openpyxl <https://openpyxl.readthedocs.io/en/default/>`_
 - `Jinja2 <http://jinja.pocoo.org/docs/2.9/>`_
 - `Click <http://click.pocoo.org/5/>`_
 
-Install
-=======
 
-Using pip
----------
+インストール
+======
+
+pipでインストール
+----------
 
 ::
 
-    # Example, Using Python3 venv module.
+    # 仮想環境でセットアップします
     $ python3 -m venv env
     $ source env/bin/activate
     (env)$ pip install pycgettb
 
-Using by Github
+Github経由でインストール
 ---------------
 
 ::
@@ -38,14 +37,14 @@ Using by Github
     $ git clone https://github.com/hrsano645/pycgettb.git
     $ cd pycgettb
 
-    # Example, Using Python3 venv module.
+    # 仮想環境でセットアップします
     $ python3 -m venv env
     $ source env/bin/activate
 
     (env)$ pip install -r requirements.txt
 
-Command Usage
-=============
+コマンドの利用方法
+=========
 
 ::
 
@@ -57,26 +56,26 @@ Command Usage
       --help                  Show this message and exit.
 
 
-- `--export_filename`: If not specified, create a file named `exported_data.txt`.
+- `--export_filename` はエクスポートしたファイルの名前を指定します。指定しない場合は exported_data.txtというファイル名を作成します。
 
-How To Use
-==========
+利用方法
+====
 
-When using pycgettb, prepare three files. The sample file is `./tests/testfiles/`.
+まず３種類のファイルを用意することで利用できます。サンプルファイルは `./tests/testfiles/` 内にあります。
 
-Source Data: An xlsx file containing the data.
+ソースデータ(source data): 変換元のデータが入ったxlsxファイル
 
 .. image:: https://github.com/hrsano645/pycgettb/blob/master/docs/img/example_data_img.png?raw=true
     :alt: source data file image
 
-Source Template: An xlsx file with embedded template variables. Make the same worksheet and cell layout of the source data file.
+ソーステンプレート(source template): ソースデータと同じワークシートやセルのレイアウトにしたものにテンプレート変数を埋め込んだxlsxファイル
 
 .. image:: https://github.com/hrsano645/pycgettb/blob/master/docs/img/example_template_img.png?raw=true
     :alt:  source template file image
 
-Export Template: The jinja2 template file (html, json, csv, etc...)
+エクスポートテンプレート(export template):jinja2のテンプレート変数を埋め込んだテキストファイル(htmlやjson, csvなど)
 
-※:The jinja2 template currently supports variables only.
+※:jinja2のテンプレートは現在は変数のみ対応です。ドットによるネストやフィルターなどの対応は未確認です。
 
 ::
 
@@ -110,13 +109,14 @@ Export Template: The jinja2 template file (html, json, csv, etc...)
     </body>
     </html>
 
-Template files(source template, export template) must be the same template variable name. Based on that convert to text data using jinja2.
+ソーステンプレートとエクスポートテンプレートで利用するテンプレート変数名は同じにすることでマッピングを行い、jinja2テンプレートを用いてテキスト形式に変換されます。
 
 ::
 
     (env)$ pycgettbcli ./tests/testfiles/template.xlsx ./tests/testfiles/data.xlsx ./tests/testfiles/export_template.html
 
-Converted result. Default file name is exported_data.txt
+
+変換された exported_data.txt は以下となります。
 
 ::
 
@@ -150,22 +150,22 @@ Converted result. Default file name is exported_data.txt
     </body>
     </html>
 
-Using as a Library
-==================
+ライブラリの利用方法
+==========
 
-pycgettb can also be used as a library.
+pycgettbはライブラリとしても利用できます。以下に簡単なサンプルを記載します。
 
 ::
 
     from pycgettb import Source
     from pycgettb import TextRender
 
-    # set file path
+    # 各種ファイルパスを指定
     src_template = "[source template file path]"
     src_data = "[source data file path]"
     export_template = "[export template file path]"
 
-    # define export filename
+    # 書き出すファイル名を指定
     export_filename = "exported_file.txt"
 
     source = Source(src_template, src_data)
@@ -173,20 +173,22 @@ pycgettb can also be used as a library.
 
     textrender = TextRender(export_template, source_data_map)
 
-    # write rendreing textdata
+    # 変換した結果を書き出す
     with open(export_filename, "w") as export_file:
         export_file.write(textrender.render())
 
-Future Work
-===========
 
-- Building a command binary for Windows, macOS, Linux.
-- Add list type to source template variable
-- GUI Frontend
-- API Document
+今後の予定
+=====
 
-License
-=======
+- 各OS向けのバイナリを用意
+- データの羅列（リスト形式）に対応できるソーステンプレートの変数の追加
+- （何かしらの方法で）GUIフロントエンド
+- APIのドキュメントを用意
+
+ライセンス
+=====
 
 MIT License
+
 
