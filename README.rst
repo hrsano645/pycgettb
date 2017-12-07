@@ -116,7 +116,7 @@ Template files(source template, export template) must be the same template varia
 
     (env)$ pycgettbcli ./tests/testfiles/template.xlsx ./tests/testfiles/data.xlsx ./tests/testfiles/export_template.html
 
-Converted result. Defalut file name is exported_data.txt
+Converted result. Default file name is exported_data.txt
 
 ::
 
