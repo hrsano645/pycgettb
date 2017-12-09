@@ -13,7 +13,7 @@ from openpyxl.utils.exceptions import InvalidFileException
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 
-__version__ = "0.1.0"
+__version__ = "0.1.2"
 
 
 # Exception list
