@@ -135,7 +135,7 @@ class TextRender(BaseRender):
     """jinja2のテンプレートを元にレンダリングする
     renderの返す結果はjinja2でレンダリングした文字列"""
 
-    def __init__(self, template_filepath: str, export_data_map: dict, template_encoding="utf-8"):
+    def __init__(self, template_filepath: str, export_data_map: dict):
         super().__init__()
 
         self.data_map = export_data_map
