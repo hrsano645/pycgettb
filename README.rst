@@ -12,10 +12,10 @@ Recommended to use it in virtual environment.
 Dependencies
 ============
 
-- Python 3.6, 2.7(Development by 3.6)
-- `openpyxl <https://openpyxl.readthedocs.io/en/default/>`_
-- `Jinja2 <http://jinja.pocoo.org/docs/2.9/>`_
-- `Click <http://click.pocoo.org/5/>`_
+- Python 3.8+
+- `openpyxl <https://openpyxl.readthedocs.io/en/default/>`_ (>=3.0.0)
+- `Jinja2 <http://jinja.pocoo.org/docs/>`_ (>=3.0.0)
+- `Click <http://click.pocoo.org/>`_ (>=8.0.0)
 
 Install
 =======

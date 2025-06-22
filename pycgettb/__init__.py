@@ -1,9 +1,3 @@
-# coding=utf-8
-from __future__ import (division,
-                        absolute_import,
-                        print_function,
-                        unicode_literals)
-
 import os
 import warnings
 
@@ -150,7 +144,7 @@ class TextRender(BaseRender):
         self.export_dirname, self.basename = os.path.split(template_filepath)
 
         self.jinja2_env = Environment(
-            loader=FileSystemLoader(self.export_dirname, encoding=template_encoding),
+            loader=FileSystemLoader(self.export_dirname),
             autoescape=select_autoescape(['html', 'xml']))
 
         self.template = self.jinja2_env.get_template(self.basename)

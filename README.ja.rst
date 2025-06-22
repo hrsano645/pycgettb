@@ -11,9 +11,10 @@ Pycgettbは帳票ベースのエクセルファイルをテキストデータに
 利用ライブラリ
 =======
 
-- `openpyxl <https://openpyxl.readthedocs.io/en/default/>`_
-- `Jinja2 <http://jinja.pocoo.org/docs/2.9/>`_
-- `Click <http://click.pocoo.org/5/>`_
+- Python 3.8以上
+- `openpyxl <https://openpyxl.readthedocs.io/en/default/>`_ (>=3.0.0)
+- `Jinja2 <https://jinja.pocoo.org/docs/>`_ (>=3.0.0)
+- `Click <https://click.pocoo.org/>`_ (>=8.0.0)
 
 
 インストール
@@ -190,5 +191,3 @@ pycgettbはライブラリとしても利用できます。以下に簡単なサ
 =====
 
 MIT License
-
-
