@@ -1,9 +1,3 @@
-# coding=utf-8
-from __future__ import (division,
-                        absolute_import,
-                        print_function,
-                        unicode_literals)
-
 import os
 import warnings
 
@@ -13,7 +7,7 @@ from openpyxl.utils.exceptions import InvalidFileException
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 
-__version__ = "0.1.2"
+__version__ = "0.1.3"
 
 
 # Exception list
@@ -141,7 +135,7 @@ class TextRender(BaseRender):
     """jinja2のテンプレートを元にレンダリングする
     renderの返す結果はjinja2でレンダリングした文字列"""
 
-    def __init__(self, template_filepath: str, export_data_map: dict, template_encoding="utf-8"):
+    def __init__(self, template_filepath: str, export_data_map: dict):
         super().__init__()
 
         self.data_map = export_data_map
@@ -150,7 +144,7 @@ class TextRender(BaseRender):
         self.export_dirname, self.basename = os.path.split(template_filepath)
 
         self.jinja2_env = Environment(
-            loader=FileSystemLoader(self.export_dirname, encoding=template_encoding),
+            loader=FileSystemLoader(self.export_dirname),
             autoescape=select_autoescape(['html', 'xml']))
 
         self.template = self.jinja2_env.get_template(self.basename)

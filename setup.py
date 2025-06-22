@@ -17,7 +17,7 @@ setup(
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
-    version='0.1.2',
+    version='0.1.3',
 
     description='convert guided form excel to text data by template base',
     long_description=long_description,
@@ -45,10 +45,12 @@ setup(
 
         # Specify the Python versions you support here. In particular, ensure
         # that you indicate whether you support Python 2, Python 3 or both.
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
+        'Programming Language :: Python :: 3.12',
     ],
 
     # What does your project relate to?
@@ -60,7 +62,12 @@ setup(
     # this:
     py_modules=["pycgettbcli"],
 
-    install_requires=['jinja2', 'click', 'openpyxl'],
+    python_requires='>=3.8',
+    install_requires=[
+        'Jinja2>=3.0.0',
+        'click>=8.0.0',
+        'openpyxl>=3.0.0'
+    ],
 
     entry_points={
         'console_scripts': [
